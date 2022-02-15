@@ -23,6 +23,8 @@ Today, my goal is to use the JSON file provided to display the title, image and 
 ## Comments
 
 ## Time Estimate assignment overview
+
+
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 Number and name of feature: ________________________________
@@ -51,6 +53,18 @@ Then the photo gallery should display all of the images in the gallery
 ### How are we implementing it?
 
 The Main component should pass props for the title, image and description to each HornedBeast component. You will find this information in the provided JSON file.
+
+#### Time Estimate of Feature 1
+
+Number and name of feature: Feature #1: Display images
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 130pm
+
+Finish time: 300pm
+
+Actual time needed to complete: 1 hour 30 minutes
 
 ## Feature #2: Allow users to vote for their favorite beast
 
