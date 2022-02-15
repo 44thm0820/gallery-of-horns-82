@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+ * {
+   background-color: skyblue;
+ }
+
+ .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+ .card {
+  display: grid;
+  grid-template-rows: max-content 300px 1fr;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card */
