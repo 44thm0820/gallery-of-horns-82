@@ -7,7 +7,11 @@ class HornedBeast extends React.Component {
         <header>
           <h2>{this.props.title}</h2>
         </header>
-        <img src={this.props.imageUrl} alt={this.props.description} />
+        <img 
+          src={this.props.imageUrl} 
+          alt={this.props.description}
+          title={this.props.title} 
+        />
         <p>{this.props.description}</p>
       </article>
     );

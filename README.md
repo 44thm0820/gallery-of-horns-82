@@ -2,10 +2,11 @@
 
 ## This readme provides an overview of the project for a new visitor to my repo
 
-## contributors
+## Contributors
 
 - Rey Mercado
-- Nicholas Mercado (provided an example of his Lab 01 readme)
+- Nicholas Mercado (provided me an example of his Lab 01 readme)
+- Matthew Rangel (helped him get unstuck from 10pm to 1030pm).  I realized while helping him that I still needed to add one more attribute (title) to the img element in the HornedBeast component in my Lab01 submission.
 
 ## Link
 
@@ -17,7 +18,7 @@
 
 ## Comments
 
-  It took me 5 hours to complete Lab 01, from 3pm to 6pm and 730pm to 930pm.  I spent extra time making each HornedBeast component centered using the .card class example from MDN.  I also took extra time to make sure the README was written correctly despite unclear instruction on what the README should look like for Lab 01 submission.  
+  It took me 5 hours to complete Lab 01, from 3pm to 6pm and 730pm to 930pm.  I spent extra time making each HornedBeast component centered using the .card class example from MDN.  I also took extra time to make sure the README was written correctly despite unclear instruction on what the README should look like for Lab 01 submission.  I finally submitted at 1030ish pm after realizing I had one more attribute to specify in the HornedBeast component.
 
 ## Getting Started with Create React App
 
