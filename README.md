@@ -90,9 +90,9 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 3pm
 
-Finish time: 
+Finish time: 4pm
 
-Actual time needed to complete: 1 hour 30 minutes
+Actual time needed to complete: 1 hour
 
 ## Feature 3: Bootstrap
 
