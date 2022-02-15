@@ -1,12 +1,16 @@
-# Lab 01: Gallery of Horns
+# Lab 01-Class02-Day 2 of 4 day lab: Gallery of Horns
+
+## Today's lab topic: React State and Props
 
 ## This readme provides an overview of the project for a new visitor to my repo
+
+By the end of this week, I will create an application that displays images and information of horned animals. This application will allow the user to filter the images by number of horns and choose his or her favorite image.
+
+Today, my goal is to use the JSON file provided to display the title, image and description of each horned beast in your application.
 
 ## Contributors
 
 - Rey Mercado
-- Nicholas Mercado (provided me an example of his Lab 01 readme)
-- Matthew Rangel (helped him get unstuck from 10pm to 1030pm).  I realized while helping him that I still needed to add one more attribute (title) to the img element in the HornedBeast component in my Lab01 submission.
 
 ## Link
 
@@ -18,7 +22,82 @@
 
 ## Comments
 
-  It took me 5 hours to complete Lab 01, from 3pm to 6pm and 730pm to 930pm.  I spent extra time making each HornedBeast component centered using the .card class example from MDN.  I also took extra time to make sure the README was written correctly despite unclear instruction on what the README should look like for Lab 01 submission.  I finally submitted at 1030ish pm after realizing I had one more attribute to specify in the HornedBeast component.
+## Time Estimate assignment overview
+
+
+For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+Add this information to your README.
+
+## Feature #1: Display images
+
+### Why are we implementing this feature 1?
+
+As a user, I want to view the images on the page so that I can browse the photo collection.
+
+### What are we going to implement?
+
+Given that a user opens the application in the browser
+When the user navigates to the home page
+Then the photo gallery should display all of the images in the gallery
+
+### How are we implementing it?
+
+The Main component should pass props for the title, image and description to each HornedBeast component. You will find this information in the provided JSON file.
+
+#### Time Estimate of Feature 1
+
+Number and name of feature: Feature #1: Display images
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 130pm
+
+Finish time: 300pm
+
+Actual time needed to complete: 1 hour 30 minutes
+
+## Feature #2: Allow users to vote for their favorite beast
+
+### Why are we implementing this feature 2?
+
+As a user, I want to be able to interact with the site and pick my favorite beast.
+
+### What are we going to implement on this feature 2?
+
+Given that a user clicks on an image, the number of “favorites” displayed on that image will increase by one.
+
+### How are we implementing this feature 2?
+
+Create state inside of the HornedBeast component that keeps track of the number of times an image was clicked.
+
+Put a heart in each horned beast with the number of times it was “favorited” next to it.
+
+## Feature 3: Bootstrap
+
+### Why are we implementing this feature 3?
+
+As a user, I want to see a visually pleasing application that is also reponsive when I view this application on different screen sizes.
+
+### What are we going to implement on this feature 3?
+
+Given that a user opens the application in the browser
+When the images are displayed on the screen
+Then each image should be rendered in a visually pleasing way
+The images should be displayed in columns, as screen width allows
+
+### How are we implementing this feature 3?
+
+Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
 
 ## Getting Started with Create React App
 
