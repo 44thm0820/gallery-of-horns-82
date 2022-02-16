@@ -38,6 +38,11 @@
 }
  * {
    background-color: skyblue;
+   text-align: center;
  }
+
+h1 {
+  font-size: 5vw;
+}
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card */

@@ -84,7 +84,7 @@ Put a heart in each horned beast with the number of times it was “favorited”
 
 #### Time Estimate of Feature 2
 
-Number and name of feature: Feature #2: Display images
+Number and name of feature: Feature #2: Allow users to vote for their favorite beast
 
 Estimate of time needed to complete: 1 hour
 
@@ -110,6 +110,19 @@ The images should be displayed in columns, as screen width allows
 ### How are we implementing this feature 3?
 
 Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
+
+#### Time Estimate of Feature 3
+
+Number and name of feature: Feature #3: Bootstrap
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4pm
+End time: 6pm
+Continue time: 11pm
+Finish time: 1145pm
+
+Actual time needed to complete: 2 hours 45 min
 
 ## Getting Started with Create React App
 
