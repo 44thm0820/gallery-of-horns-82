@@ -121,7 +121,7 @@ Start time: 4pm
 
 Finish time: 
 
-Actual time needed to complete: 
+Actual time needed to complete: 3 hours
 
 ## Getting Started with Create React App
 

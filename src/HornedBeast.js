@@ -1,10 +1,12 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import './HornedBeast.css'
 
 class HornedBeast extends React.Component {
   // THIS is how we set up state in a component (reference 1:49 in Day2 video)
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       likes: 0,
     }
   }
@@ -17,7 +19,8 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <article className="card">
+      // <article className="card">
+      <Card>
         <header>
           <h2>{this.props.title}</h2>
         </header>
@@ -28,7 +31,8 @@ class HornedBeast extends React.Component {
         />
         <p>💜: {this.state.likes}</p>
         <p>{this.props.description}</p>
-      </article>
+      </Card>
+      // </article>
     );
   }
 }
