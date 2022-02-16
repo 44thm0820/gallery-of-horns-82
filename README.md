@@ -82,6 +82,18 @@ Create state inside of the HornedBeast component that keeps track of the number 
 
 Put a heart in each horned beast with the number of times it was “favorited” next to it.
 
+#### Time Estimate of Feature 2
+
+Number and name of feature: Feature #2: Display images
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 3pm
+
+Finish time: 4pm
+
+Actual time needed to complete: 1 hour
+
 ## Feature 3: Bootstrap
 
 ### Why are we implementing this feature 3?
