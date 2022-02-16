@@ -19,20 +19,23 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      // <article className="card">
-      <Card>
-        <header>
-          <h2>{this.props.title}</h2>
-        </header>
-        <img onClick={this.handleLikes}
-          src={this.props.imageUrl} 
-          alt={this.props.description}
-          title={this.props.title} 
-        />
-        <p>💜: {this.state.likes}</p>
-        <p>{this.props.description}</p>
+      <Card
+        style={{ width: '18rem' }} 
+      >
+        <Card.Body>
+          <Card.Title>
+            <h2>{this.props.title}</h2>
+          </Card.Title>
+          <Card.Img 
+            onClick={this.handleLikes}
+            src={this.props.imageUrl} 
+            alt={this.props.description}
+            title={this.props.title} >
+          </Card.Img>
+          <Card.Text>💜: {this.state.likes}</Card.Text>
+          <Card.Text>{this.props.description}</Card.Text>
+        </Card.Body>
       </Card>
-      // </article>
     );
   }
 }

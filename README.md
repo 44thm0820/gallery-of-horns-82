@@ -118,10 +118,11 @@ Number and name of feature: Feature #3: Bootstrap
 Estimate of time needed to complete: 1 hour
 
 Start time: 4pm
+End time: 6pm
+Continue time: 11pm
+Finish time: 1145pm
 
-Finish time: 
-
-Actual time needed to complete: 3 hours
+Actual time needed to complete: 2 hours 45 min
 
 ## Getting Started with Create React App
 
