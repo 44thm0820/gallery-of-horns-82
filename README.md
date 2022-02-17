@@ -66,10 +66,11 @@ Number and name of feature: Feature #1: Display a Modal
 Estimate of time needed to complete: 3 hours
 
 Start time: 140pm
+End time: 600pm
+Start time: 1015pm
+Finish time: 1145pm
 
-Finish time: 
-
-Actual time needed to complete: 1 hour 30 minutes
+Actual time needed to complete: 5 hour 50 minutes
 
 
 
