@@ -36,6 +36,15 @@ class App extends React.Component {
     // console.log('works');
     return (
       <>
+        <h1>In-FORM-Ed</h1>
+        <form>
+          <fieldset>
+            <legend>Deep Ponderings</legend>
+            <label>name
+              <input type="text" onInput={this.handleName}/>
+            </label>
+          </fieldset>
+        </form>
         <Header />
         <SelectedBeast
           showModal={this.state.showModal} 
