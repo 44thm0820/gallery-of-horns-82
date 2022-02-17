@@ -3,8 +3,8 @@ import './App.css';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
+import SelectedBeast from './SelectedBeast'
 import hornedBeasts from './data.json';
-import Modal from 'react-bootstrap/Modal';
 
 
 class App extends React.Component {
@@ -35,14 +35,11 @@ class App extends React.Component {
       <>
         <Header />
 
-        <Modal show={this.state.showModal} onHide={this.handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>{this.state.nameOfBeast}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {this.state.nameOfBeast} is an important part of this community!
-          </Modal.Body>
-        </Modal>
+        <SelectedBeast
+          showModal={this.state.showModal} 
+          handleCloseModal={this.handleCloseModal}
+          nameOfBeast={this.state.nameOfBeast}
+        />
         
         <Main 
           hornedBeasts={hornedBeasts} 
