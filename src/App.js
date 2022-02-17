@@ -13,7 +13,8 @@ class App extends React.Component {
     this.state = {
       showModal: false, //true temporarily only to confirm proof of life
       // nameOfBeast: 'unknown name',
-      objBeast: {}
+      objBeast: {},
+      name: ''
     }
   }
 
@@ -32,11 +33,19 @@ class App extends React.Component {
     })
   }
 
+  handleName = (event) => {
+    this.setState({
+      name: event.target.value
+    }
+    );
+  }
+
+
   render() {
     // console.log('works');
     return (
       <>
-        <h1>In-FORM-Ed</h1>
+        <h1>In-FORM-Ed {this.state.name}</h1>
         <form>
           <fieldset>
             <legend>Deep Ponderings</legend>
