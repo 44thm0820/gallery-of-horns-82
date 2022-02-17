@@ -17,6 +17,16 @@ class HornedBeast extends React.Component {
     })
   }
 
+  handleBeastClick = () => {
+    this.handleLikes();
+    // this.props.handleShowModal(this.props.title);
+    this.props.handleShowModal({
+      title: this.props.title,
+      imageUrl: this.props.imageUrl,
+      description: this.props.description,
+    });
+  }
+
   render() {
     return (
       <Card
@@ -27,7 +37,7 @@ class HornedBeast extends React.Component {
             <h2>{this.props.title}</h2>
           </Card.Title>
           <Card.Img 
-            onClick={this.handleLikes}
+            onClick={this.handleBeastClick}
             src={this.props.imageUrl} 
             alt={this.props.description}
             title={this.props.title} >
