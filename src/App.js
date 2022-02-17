@@ -12,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false, //true temporarily only to confirm proof of life
-      nameOfBeast: 'unknown name'
+      // nameOfBeast: 'unknown name',
+      objBeast: {}
     }
   }
 
@@ -22,10 +23,12 @@ class App extends React.Component {
     })
   }
 
-  handleShowModal = (beastName) => {
+  handleShowModal = (beastObj) => {
+  // handleShowModal = (beastName) => {
     this.setState({
       showModal: true,
-      nameOfBeast: beastName
+      // nameOfBeast: beastName,
+      objBeast: beastObj
     })
   }
 
@@ -34,13 +37,12 @@ class App extends React.Component {
     return (
       <>
         <Header />
-
         <SelectedBeast
           showModal={this.state.showModal} 
           handleCloseModal={this.handleCloseModal}
-          nameOfBeast={this.state.nameOfBeast}
+          // nameOfBeast={this.state.nameOfBeast}
+          objBeast={this.state.objBeast}
         />
-        
         <Main 
           hornedBeasts={hornedBeasts} 
           handleShowModal={this.handleShowModal}
