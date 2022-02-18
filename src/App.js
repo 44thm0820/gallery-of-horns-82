@@ -6,6 +6,7 @@ import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast'
 import hornedBeasts from './data.json';
 
+let nums = [0,1,2,3,4,5,6,7,8,9];
 
 class App extends React.Component {
   constructor(props) {
@@ -48,6 +49,10 @@ class App extends React.Component {
     );
   }
 
+  handleSelect = (event) => {
+    console.log(event.target.value);
+  }
+
 
   render() {
     // console.log('works');
@@ -61,8 +66,13 @@ class App extends React.Component {
             <label>name
               <input type="text" onInput={this.handleName}/>
             </label>
-            <label for="word">Word</label>
+            <label htmlFor="word">Word</label>
             <input id="word" type="text" onChange={this.handleWord}/>
+            <select onChange={this.handleSelect}>
+              <option value="all">All</option>
+              <option value="even">Even</option>
+              <option value="odd">Odd</option>
+            </select>
           </fieldset>
         </form>
         <Header />
