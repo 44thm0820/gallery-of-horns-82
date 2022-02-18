@@ -97,6 +97,7 @@ class App extends React.Component {
       <>
         <h1>In-FORM-Ed {this.state.name}</h1>
         <h3>{this.state.word !== '' ? this.state.word + ' is the word': ''}</h3>
+{/* 
         <form onSubmit={this.handleSubmit}>
           <fieldset>
             <legend>Deep Ponderings</legend>
@@ -104,7 +105,24 @@ class App extends React.Component {
               <input name="name" type="text" onInput={this.handleName}/>
             </label>
             <label htmlFor="word">Word</label>
-            <input name="word" id="word" type="text" onChange={this.handleWord}/>
+              <input name="word" id="word" type="text" onChange={this.handleWord}/>
+            <select name="selected" onChange={this.handleSelect}>
+              <option value="all">All</option>
+              <option value="even">Even</option>
+              <option value="odd">Odd</option>
+            </select>
+            <button>Submit</button>
+          </fieldset>
+        </form> */}
+        
+        <form onSubmit={this.handleSubmit}>
+          <fieldset>
+            <legend>Deep Ponderings</legend>
+            <label>name
+              <input name="name" type="text" onInput={this.handleName}/>
+            </label>
+            <label htmlFor="word">Word</label>
+              <input name="word" id="word" type="text" onChange={this.handleWord}/>
             <select name="selected" onChange={this.handleSelect}>
               <option value="all">All</option>
               <option value="even">Even</option>
@@ -113,6 +131,7 @@ class App extends React.Component {
             <button>Submit</button>
           </fieldset>
         </form>
+
         <ul>
           {listItems}
         </ul>
