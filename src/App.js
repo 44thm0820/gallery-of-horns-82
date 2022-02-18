@@ -65,13 +65,31 @@ class App extends React.Component {
     if(selected === 'all') {
       this.setState({ nums });
       // this.setState({ nums: nums }); //equivalent to above
+
     }
-    
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+
+    let name = event.target.name.value;
+    let word = event.target.word.value;
+    let selected = event.target.selected.value;
+
+    console.log(name, word, selected);
+    
+    this.setState({
+      submitName: name,
+      submitWord: word,
+      submitSelected: selected
+    });
+   
+    console.log('logging this.state inside this.handleSubmit', this.state);
+
+  }
 
   render() {
-    // console.log('works');
+    console.log('logging this.state outside this.handleSubmit', this.state);
     let listItems = this.state.nums.map((listItem, idx) => (
       <li key={idx}>{listItem}</li>
     ));
@@ -79,19 +97,20 @@ class App extends React.Component {
       <>
         <h1>In-FORM-Ed {this.state.name}</h1>
         <h3>{this.state.word !== '' ? this.state.word + ' is the word': ''}</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <fieldset>
             <legend>Deep Ponderings</legend>
             <label>name
-              <input type="text" onInput={this.handleName}/>
+              <input name="name" type="text" onInput={this.handleName}/>
             </label>
             <label htmlFor="word">Word</label>
-            <input id="word" type="text" onChange={this.handleWord}/>
-            <select onChange={this.handleSelect}>
+            <input name="word" id="word" type="text" onChange={this.handleWord}/>
+            <select name="selected" onChange={this.handleSelect}>
               <option value="all">All</option>
               <option value="even">Even</option>
               <option value="odd">Odd</option>
             </select>
+            <button>Submit</button>
           </fieldset>
         </form>
         <ul>
