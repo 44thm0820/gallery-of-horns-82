@@ -14,7 +14,8 @@ class App extends React.Component {
       showModal: false, //true temporarily only to confirm proof of life
       // nameOfBeast: 'unknown name',
       objBeast: {},
-      name: ''
+      name: '',
+      word: ''
     }
   }
 
@@ -40,18 +41,28 @@ class App extends React.Component {
     );
   }
 
+  handleWord = (event) => {
+    this.setState({
+      word: event.target.value
+    }
+    );
+  }
+
 
   render() {
     // console.log('works');
     return (
       <>
         <h1>In-FORM-Ed {this.state.name}</h1>
+        <h3>{this.state.word !== '' ? this.state.word + ' is the word': ''}</h3>
         <form>
           <fieldset>
             <legend>Deep Ponderings</legend>
             <label>name
               <input type="text" onInput={this.handleName}/>
             </label>
+            <label for="word">Word</label>
+            <input id="word" type="text" onChange={this.handleWord}/>
           </fieldset>
         </form>
         <Header />
