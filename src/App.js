@@ -5,6 +5,7 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast'
 import hornedBeasts from './data.json';
+import { Form, Button, ListGroup, Container } from 'react-bootstrap';
 
 let nums = [0,1,2,3,4,5,6,7,8,9];
 
@@ -91,7 +92,8 @@ class App extends React.Component {
   render() {
     console.log('logging this.state outside this.handleSubmit', this.state);
     let listItems = this.state.nums.map((listItem, idx) => (
-      <li key={idx}>{listItem}</li>
+      <ListGroup.Item key={idx}>{listItem}</ListGroup.Item>
+      // <li key={idx}>{listItem}</li>
     ));
     return (
       <>
@@ -114,39 +116,49 @@ class App extends React.Component {
             <button>Submit</button>
           </fieldset>
         </form> */}
-        
-        <form onSubmit={this.handleSubmit}>
-          <fieldset>
-            <legend>Deep Ponderings</legend>
-            <label>name
-              <input name="name" type="text" onInput={this.handleName}/>
-            </label>
-            <label htmlFor="word">Word</label>
-              <input name="word" id="word" type="text" onChange={this.handleWord}/>
-            <select name="selected" onChange={this.handleSelect}>
-              <option value="all">All</option>
-              <option value="even">Even</option>
-              <option value="odd">Odd</option>
-            </select>
-            <button>Submit</button>
-          </fieldset>
-        </form>
+        <Container>
+          <Form onSubmit={this.handleSubmit} style={{width: 'max-content', margin: 'auto'}}>
+              <Form.Group controlId='name'>
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" onInput={this.handleName}/>
+              </Form.Group>
+              <Form.Group controlId='word'>
+                <Form.Label>Word</Form.Label>
+                <Form.Control type="text" onChange={this.handleWord}/>
+              </Form.Group>
+              <Form.Group controlId='selected'>
+                <Form.Select onChange={this.handleSelect}>
+                  <option value="all">All</option>
+                  <option value="even">Even</option>
+                  <option value="odd">Odd</option>
+                </Form.Select>
+              </Form.Group>
+              <Button type="submit">Submit</Button>
 
-        <ul>
+          </Form>
+        </Container>
+
+        {/* <ul>
           {listItems}
-        </ul>
-        <Header />
-        <SelectedBeast
-          showModal={this.state.showModal} 
-          handleCloseModal={this.handleCloseModal}
-          // nameOfBeast={this.state.nameOfBeast}
-          objBeast={this.state.objBeast}
-        />
-        <Main 
-          hornedBeasts={hornedBeasts} 
-          handleShowModal={this.handleShowModal}
-        />
-        <Footer />
+        </ul> */}
+        <ListGroup as="ul">
+          {listItems}
+        </ListGroup>
+        <Container>
+          <Header />
+          <SelectedBeast
+            showModal={this.state.showModal} 
+            handleCloseModal={this.handleCloseModal}
+            // nameOfBeast={this.state.nameOfBeast}
+            objBeast={this.state.objBeast}
+          />
+          <Main 
+            hornedBeasts={hornedBeasts} 
+            handleShowModal={this.handleShowModal}
+          />
+          <Footer />
+
+        </Container>
       </>
     );
   }
