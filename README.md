@@ -61,6 +61,10 @@ Number and name of feature: Feature #1: Filter by Numbers of Horns
 Estimate of time needed to complete: 3 hours
 
 Start time: 250pm
-Finish time: 
+Break time: 6pm
+Continuing time: 815pm
+Break time: 945pm  
+Continuing time: 1045pm
+Finish time: 1130pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 6 hours 35 minutes
