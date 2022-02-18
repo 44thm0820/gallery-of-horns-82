@@ -16,7 +16,8 @@ class App extends React.Component {
       // nameOfBeast: 'unknown name',
       objBeast: {},
       name: '',
-      word: ''
+      word: '',
+      nums: nums
     }
   }
 
@@ -50,12 +51,30 @@ class App extends React.Component {
   }
 
   handleSelect = (event) => {
-    console.log(event.target.value);
+    let selected = event.target.value;
+    // console.log(event.target.value);
+
+    if(selected === 'even') {
+      let newNums = nums.filter(num => num % 2 === 0);  
+      this.setState({ nums: newNums });
+    }
+    if(selected === 'odd') {
+      let newNums = nums.filter(num => num % 2 === 1);  
+      this.setState({ nums: newNums });
+    }
+    if(selected === 'all') {
+      this.setState({ nums });
+      // this.setState({ nums: nums }); //equivalent to above
+    }
+    
   }
 
 
   render() {
     // console.log('works');
+    let listItems = this.state.nums.map((listItem, idx) => (
+      <li key={idx}>{listItem}</li>
+    ));
     return (
       <>
         <h1>In-FORM-Ed {this.state.name}</h1>
@@ -75,6 +94,9 @@ class App extends React.Component {
             </select>
           </fieldset>
         </form>
+        <ul>
+          {listItems}
+        </ul>
         <Header />
         <SelectedBeast
           showModal={this.state.showModal} 
