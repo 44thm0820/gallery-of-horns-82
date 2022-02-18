@@ -118,14 +118,14 @@ class App extends React.Component {
         </form> */}
         <Container>
           <Form onSubmit={this.handleSubmit} style={{width: 'max-content', margin: 'auto'}}>
-              <Form.Group controlId='name'>
+              {/* <Form.Group controlId='name'>
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" onInput={this.handleName}/>
               </Form.Group>
               <Form.Group controlId='word'>
                 <Form.Label>Word</Form.Label>
                 <Form.Control type="text" onChange={this.handleWord}/>
-              </Form.Group>
+              </Form.Group> */}
               <Form.Group controlId='selected'>
                 <Form.Select onChange={this.handleSelect}>
                   <option value="all">All</option>
@@ -133,7 +133,7 @@ class App extends React.Component {
                   <option value="odd">Odd</option>
                 </Form.Select>
               </Form.Group>
-              <Button type="submit">Submit</Button>
+              {/* <Button type="submit">Submit</Button> */}
 
           </Form>
         </Container>
@@ -141,9 +141,11 @@ class App extends React.Component {
         {/* <ul>
           {listItems}
         </ul> */}
-        <ListGroup as="ul">
-          {listItems}
-        </ListGroup>
+        <Container>
+          <ListGroup as="ul">
+            {listItems}
+          </ListGroup>
+        </Container>
         <Container>
           <Header />
           <SelectedBeast
